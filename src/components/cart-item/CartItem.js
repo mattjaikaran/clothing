@@ -10,7 +10,7 @@ const CartItem = ({ item: { imageUrl, price, name, quantity } }) => (
         {quantity} x ${price}
         {
           quantity > 1 ? <span>
-            {' '} = {quantity * price}
+            {' '} = ${quantity * price}
           </span> : null
         }
       </span>
