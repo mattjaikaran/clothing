@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import CollectionItem from '../../components/collection-item/CollectionItem'
-
 import { selectCollection } from '../../redux/shop/shopSelectors'
-
 import { CollectionContainer, Title, ItemContainer } from './CollectionStyles'
 
 const CollectionPage = ({ collection }) => {

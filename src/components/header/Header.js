@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { ReactComponent as Logo } from '../../assets/crown.svg'
-import './Header.scss'
 
 import CartDropdown from '../cart-dropdown/CartDropdown'
 import CartIcon from '../cart-icon/CartIcon'
@@ -30,7 +29,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
         CONTACT
       </OptionLink>
       {currentUser ? (
-        <OptionLink as="div" onClick={signOutStart}>
+        <OptionLink to="#!" as="div" onClick={signOutStart}>
           SIGN OUT
         </OptionLink>
       ) : (
