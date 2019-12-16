@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import CustomButton from '../custom-button/CustomButton'
 
 export const CollectionItemContainer = styled.div`
-  width: 22vw;
   display: flex;
+  margin: 50px 0;
   flex-direction: column;
   height: 350px;
   align-items: center;
@@ -45,8 +45,8 @@ export const AddButton = styled(CustomButton)`
 `
 
 export const BackgroundImage = styled.div`
-  width: 100%;
-  height: 95%;
+  width: 300px;
+  height: 90%;
   background-size: cover;
   background-position: center;
   margin-bottom: 5px;

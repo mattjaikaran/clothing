@@ -13,10 +13,10 @@ const INITIAL_STATE = {
       linkUrl: 'shop/jackets'
     },
     {
-      title: 'sneakers',
+      title: 'boots',
       imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
       id: 3,
-      linkUrl: 'shop/sneakers'
+      linkUrl: 'shop/boots'
     },
     {
       title: 'womens',
