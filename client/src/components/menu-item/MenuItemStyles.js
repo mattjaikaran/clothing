@@ -53,7 +53,7 @@ export const ContentContainer = styled.div`
   opacity: 0.5;
   position: absolute;
   @media screen and (max-width: 767px) {
-    margin-top: 50px;
+    margin-top: 70px;
   }
 `
 
