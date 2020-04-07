@@ -41,7 +41,8 @@ export const BackgroundImageContainer = styled.div`
 `
 
 export const ContentContainer = styled.div`
-  height: 90px;
+  height: 40px;
+  margin-top: 85px;
   padding: 0 25px;
   display: flex;
   flex-direction: column;
@@ -49,18 +50,24 @@ export const ContentContainer = styled.div`
   justify-content: center;
   border: 1px solid black;
   background-color: white;
-  opacity: 0.7;
+  opacity: 0.5;
   position: absolute;
+  @media screen and (max-width: 767px) {
+    margin-top: 50px;
+  }
 `
 
 export const ContentTitle = styled.span`
   font-weight: bold;
   margin-bottom: 6px;
-  font-size: 22px;
+  font-size: 20px;
   color: #4a4a4a;
 `
 
 export const ContentSubtitle = styled.span`
   font-weight: lighter;
-  font-size: 16px;
+  font-size: 14px;
+  @media screen and (max-width: 767px) {
+    font-size: 10px;
+  }
 `
