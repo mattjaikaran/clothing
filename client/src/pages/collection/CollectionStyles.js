@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const CollectionContainer = styled.div`
-display: flex;
-flex-direction: column;
+// display: flex;
+// flex-direction: column;
 `
 
 export const Title = styled.h2`
@@ -11,7 +11,7 @@ export const Title = styled.h2`
 `
 
 export const ItemContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-gap: 10px;
 `

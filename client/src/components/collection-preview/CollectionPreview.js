@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 
 import CollectionItem from '../collection-item/CollectionItem'
-import { CollectionTitle, CollectionPreviewContainer } from './CollectionPreviewStyles'
+import { CollectionTitle } from './CollectionPreviewStyles'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,16 +23,16 @@ const CollectionPreview = ({ title, items }) => {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <CollectionTitle>{title.toUpperCase()}</CollectionTitle>
-        <CollectionPreviewContainer>
-          {items
-            .filter((item, index) => index < 4)
-            .map((item) => (
-              <Grid item xs={6} sm={3}>
-                <CollectionItem className={classes.paper} key={item.id} item={item} />
-              </Grid>
+        <CollectionTitle>
+          {title.toUpperCase()}
+        </CollectionTitle>
+        {items
+          .filter((item, index) => index < 4)
+          .map((item) => (
+            <Grid key={item.id} item xs={6} sm={4} md={3}>
+              <CollectionItem item={item} />
+            </Grid>
           ))}
-        </CollectionPreviewContainer>
       </Grid>
     </div>
   )

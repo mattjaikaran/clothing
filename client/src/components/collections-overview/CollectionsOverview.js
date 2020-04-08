@@ -9,13 +9,13 @@ import CollectionPreview from  '../collection-preview/CollectionPreview'
 import { CollectionsContainer } from './CollectionsStyles'
 
 const CollectionsOverview = ({ collections }) => (
-  <Grid container spacing={8}>
+  <div>
     {collections.map(({ id, ...otherCollectionProps }) => (
-      <Grid item xs={6} sm={3}>
-        <CollectionPreview key={id} {...otherCollectionProps} />
-      </Grid>
+      <div key={id}>
+        <CollectionPreview {...otherCollectionProps} />
+      </div>
     ))}
-  </Grid>
+  </div>
 )
 
 const mapStateToProps = createStructuredSelector({
