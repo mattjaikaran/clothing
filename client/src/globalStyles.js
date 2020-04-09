@@ -16,6 +16,9 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: black;
   }
+  .MuiButton-root {
+    border-radius: 0 !important;
+  }
 
   * {
     box-sizing: border-box;
