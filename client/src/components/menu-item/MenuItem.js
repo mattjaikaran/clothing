@@ -1,11 +1,11 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
+import Grid from '@material-ui/core/Grid'
 
 import {
   MenuItemContainer,
   BackgroundImageContainer,
   ContentContainer,
-  ContentTitle,
   ContentSubtitle
 } from './MenuItemStyles'
 
@@ -19,7 +19,6 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
       imageUrl={imageUrl}
     />
     <ContentContainer className='content'>
-      {/* <ContentTitle>{title.toUpperCase()}</ContentTitle> */}
       <ContentSubtitle>SHOP {title.toUpperCase()}</ContentSubtitle>
     </ContentContainer>
   </MenuItemContainer>
