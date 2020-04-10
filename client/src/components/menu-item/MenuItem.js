@@ -35,7 +35,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
       />
       <ContentContainer className='content'>
         <Button className={classes.menuBtn} variant="outlined">
-          SHOP {title.toUpperCase()}
+          SHOP NOW
         </Button>
       </ContentContainer>
     </MenuItemContainer>

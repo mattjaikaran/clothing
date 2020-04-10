@@ -27,7 +27,7 @@ const HeroSlider = () => {
   ]
   return (
     <Carousel autoPlay={false}>
-      {items.map(item => <Item item={item} />)}
+      {items.map(item => <Item key={item.name} item={item} />)}
     </Carousel>
   )
 }

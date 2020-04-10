@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'Palanquin';
     padding: 20px 60px;
@@ -19,8 +23,14 @@ export const GlobalStyle = createGlobalStyle`
   .MuiButton-root {
     border-radius: 0 !important;
   }
-
-  * {
-    box-sizing: border-box;
+ 
+  h1, 
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6 {
+    font-family: 'Suranna', serif !important;
+    font-weight: 400;
   }
 `

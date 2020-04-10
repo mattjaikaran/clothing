@@ -6,7 +6,7 @@ import Hidden from '@material-ui/core/Hidden'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
   },
   imgContainer: {
     // textAlign: 'left'
@@ -17,22 +17,30 @@ const useStyles = makeStyles(theme => ({
   },
   copyContainer: {
     marginTop: '8%',
+    padding: '12px 0 12px 17% !important',
     [theme.breakpoints.down('sm')]: {
-      marginTop: '0'
-    }
+      padding: '12px 0 12px 28% !important',
+      marginLeft: 'auto',
+      marginTop: '0',
+    },
+    [theme.breakpoints.only('sm')]: {
+      padding: '12px 0 12px 10% !important'
+    },
   },
   copy: {
-    textAlign: 'center',
+    textAlign: 'left',
+    lineHeight: '28px'
   },
   btn: {
-    textAlign: 'center'
+    minWidth: '160px !important',
+    fontSize: '0.7rem !important',
   }
 }))
 
 const HomepageGrid = () => {
   const classes = useStyles()
   return (
-    <Grid container spacing={3}>
+    <Grid container className={classes.root} spacing={3}>
 
       <Grid item xs={12} sm={6}>
         <img 
@@ -40,24 +48,32 @@ const HomepageGrid = () => {
           src="https://firebasestorage.googleapis.com/v0/b/clothing-c8c08.appspot.com/o/flaunter-0cOH0qEVZzE-unsplash.jpg?alt=media&token=50e5755e-40be-4acf-8735-238bb399efe4" />
       </Grid>
       <Grid className={classes.copyContainer} item xs={12} sm={6}>
-        <p className={classes.copy}>
-          Explore elegant styles for a night out. 
-        </p>
-        <div className={classes.btn}>
-          <Button variant="outlined" color="default">
-            Shop Womens
+        <h2 className={classes.copy}>
+          Explore elegant styles <br />
+          for a night out. 
+        </h2>
+        <div>
+          <Button 
+            className={classes.btn} 
+            variant="outlined" 
+            color="default">
+            Shop Now
           </Button>
         </div>
       </Grid>
 
       <Hidden xsDown>
         <Grid className={classes.copyContainer} item xs={12} sm={6}>
-          <p className={classes.copy}>
-            Shop our latest Mens Collection.
-        </p>
-          <div className={classes.btn}>
-            <Button variant="outlined" color="default">
-              Shop Mens
+          <h2 className={classes.copy}>
+            Shop our latest <br />
+            Mens Collection.
+        </h2>
+          <div>
+            <Button 
+              className={classes.btn} 
+              variant="outlined" 
+              color="default">
+              Shop Now
           </Button>
           </div>
         </Grid>
@@ -69,12 +85,16 @@ const HomepageGrid = () => {
       </Grid>
       <Hidden smUp>
         <Grid className={classes.copyContainer} item xs={12} sm={6}>
-          <p className={classes.copy}>
-            Shop our latest Mens Collection.
-        </p>
-          <div className={classes.btn}>
-            <Button variant="outlined" color="default">
-              Shop Mens
+          <h2 className={classes.copy}>
+            Shop our latest <br />
+            Mens Collection.
+        </h2>
+          <div>
+            <Button 
+              className={classes.btn} 
+              variant="outlined" 
+              color="default">
+              Shop Now
           </Button>
           </div>
         </Grid>
@@ -86,24 +106,33 @@ const HomepageGrid = () => {
           src="https://firebasestorage.googleapis.com/v0/b/clothing-c8c08.appspot.com/o/vadim-sherbakov-tCICLJ5ktBE-unsplash.jpg?alt=media&token=1b938314-7b1a-45cc-9c85-f12ac52ee341" />
       </Grid>
       <Grid className={classes.copyContainer} item xs={12} sm={6}>
-        <p className={classes.copy}>
-          On the go? Check out our latest Travel Accessories.
-        </p>
-        <div className={classes.btn}>
-          <Button variant="outlined" color="default">
-            Shop Accessories
+        <h2 className={classes.copy}>
+          On the go? <br />
+          Check out our latest <br />
+          Travel Accessories.
+        </h2>
+        <div>
+          <Button 
+            className={classes.btn} 
+            variant="outlined" 
+            color="default">
+            Shop Now
           </Button>
         </div>
       </Grid>
 
       <Hidden xsDown>
         <Grid className={classes.copyContainer} item xs={12} sm={6}>
-          <p className={classes.copy}>
-            Shop our Featured Collection.
-        </p>
-          <div className={classes.btn}>
-            <Button variant="outlined" color="default">
-              Shop Featured
+          <h2 className={classes.copy}>
+            Shop our <br />
+            Featured Collection.
+          </h2>
+          <div>
+            <Button 
+              className={classes.btn} 
+              variant="outlined" 
+              color="default">
+              Shop Now
           </Button>
           </div>
         </Grid>
@@ -115,13 +144,17 @@ const HomepageGrid = () => {
       </Grid>
       <Hidden smUp>
         <Grid className={classes.copyContainer} item xs={12} sm={6}>
-          <p className={classes.copy}>
-            Shop our Featured Collection.
-        </p>
-          <div className={classes.btn}>
-            <Button variant="outlined" color="default">
-              Shop Featured
-          </Button>
+          <h2 className={classes.copy}>
+            Shop our <br />
+            Featured Collection.
+          </h2>
+          <div>
+            <Button 
+              className={classes.btn} 
+              variant="outlined" 
+              color="default">
+              Shop Now
+            </Button>
           </div>
         </Grid>
       </Hidden>
