@@ -26,10 +26,11 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     display: 'flex',
     justifyContent: 'space-between',
-    marginBottom: '25px',
+    marginBottom: '-10px',
     color: 'white',
     [theme.breakpoints.down('sm')]: {
       position: 'sticky',
+      marginBottom: '-25px',
     }
   }
 }))
