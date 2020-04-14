@@ -20,11 +20,12 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     paddingTop: '20vh',
     color: 'white',
-    opacity: '0.9',
+    backgroundColor: 'black',
+    opacity: '0.8',
     marginTop: '35px'
   },
   header: {
-    textShadow: '1px 1px #000'
+    // opacity: '1'
   },
   cta: {
     backgroundColor: 'black',
@@ -50,7 +51,7 @@ const Item = (props) => {
         variant="contained" 
         color="primary"
         className={classes.cta}
-        to={link}>
+        href={link}>
         {linkCopy}
       </Button>
     </div>
@@ -60,13 +61,13 @@ const Item = (props) => {
 const HeroSlider = () => {
   const items = [
     {
-      name: "Up to 90% off on designer jackets",
+      name: "Up to 90% off on designer Jackets",
       imgSrc: "https://firebasestorage.googleapis.com/v0/b/clothing-c8c08.appspot.com/o/andrew-neel-HqtYwlY9dxs-unsplash.jpg?alt=media&token=3937b169-d6c2-4b17-950a-c13850fe52bc",
       linkCopy: "Shop Outwear",
       link: "/shop/jackets",
     },
     {
-      name: "Hello World!",
+      name: "Buy one get one free on Accessories",
       description: "Probably the most random thing you have ever seen!",
       imgSrc: "https://firebasestorage.googleapis.com/v0/b/clothing-c8c08.appspot.com/o/zdenek-machacek-lmZtT6q8tt0-unsplash.jpg?alt=media&token=6e56df04-1d4a-4ec4-a51d-baef07b374e1",
       linkCopy: "Explore Accessories",
