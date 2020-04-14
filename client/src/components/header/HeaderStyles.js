@@ -1,44 +1,50 @@
 import styled from 'styled-components'
+import AppBar from '@material-ui/core/AppBar'
 import { Link } from 'react-router-dom'
 
-export const HeaderContainer = styled.div`
-  height: 70px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
+// export const HeaderContainer = styled.div`
+//   height: 70px;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 25px;
 
-  @media screen and (max-width: 767px) {
-    height: 60px;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-`
+//   @media screen and (max-width: 767px) {
+//     height: 60px;
+//     padding: 10px;
+//     margin-bottom: 20px;
+//     position: sticky;
+//   }
+// `
 
 export const LogoContainer = styled(Link)`
-  height: 100%;
-  width: 70px;
-  padding: 15px;
+  height: auto;
+  max-width: 70px;
+  width: 35px;
+  margin-top: 1%;
+  margin-left: 2%;
 
   @media screen and (max-width: 767px) {
-    width: 50px;
-    padding: 10px;
+    max-width: 50px;
+    margin-top: 2%;
+    margin-left: 3%;
   }
 `
 
 export const OptionsContainer = styled.div`
-  width: 50%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  width: 97%;
+  position: absolute;
+  margin-top: 1%;
 
   @media screen and (max-width: 767px) {
-    width: 80%;
+    margin-top: 2%;
   }
 `
 
 export const OptionLink = styled(Link)`
-  padding: 10px 15px;
+  padding: 5px;
   cursor: pointer;
 `

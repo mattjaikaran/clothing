@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
 import './HeroSlider.css'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   carouselImg: {
     width: '100%'
   },
@@ -19,7 +19,8 @@ const useStyles = makeStyles({
     alignItems: 'center',
     paddingTop: '20vh',
     color: 'white',
-    opacity: '0.9'
+    opacity: '0.9',
+    marginTop: '35px'
   },
   cta: {
     textAlign: 'center',
@@ -27,7 +28,7 @@ const useStyles = makeStyles({
     margin: '0 auto',
     maxWidth: '200px'
   }
-})
+}))
 
 const Item = (props) => {
   const classes = useStyles()
