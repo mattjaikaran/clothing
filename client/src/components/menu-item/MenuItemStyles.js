@@ -36,20 +36,11 @@ export const BackgroundImageContainer = styled.div`
 
 export const ContentContainer = styled.div`
   height: 40px;
-  margin-top: 85px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -100px;
   justify-content: center;
-  position: absolute;
   @media screen and (max-width: 767px) {
-    margin-top: 70px;
   }
-`
-
-export const ContentTitle = styled.span`
-  font-weight: bold;
-  margin-bottom: 6px;
-  font-size: 20px;
-  color: #4a4a4a;
 `

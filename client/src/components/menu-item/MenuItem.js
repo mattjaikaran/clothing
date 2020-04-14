@@ -5,40 +5,58 @@ import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
 
 import {
-  MenuItemContainer,
   BackgroundImageContainer,
   ContentContainer,
-  ContentSubtitle
 } from './MenuItemStyles'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   menuBtn: {
     backgroundColor: 'white',
     opacity: '0.5',
     '&:hover': {
-      backgroundColor: 'white',
+      transition: 'background-color 0.8s ease !important',
+      backgroundColor: 'black',
+      color: 'white',
       opacity: '0.8'
     }
+  },
+  title: {
+    color: 'white'
+  },
+  menuItemContainer: {
+    height: '240px',
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: '0 auto',
+    [theme.breakpoints.down('sm')]: {
+      '&:lastChild': {
+        flexGrow: 1
+      }
+    }
   }
-})
+}))
 
 const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
   const classes = useStyles()
   return (
-    <MenuItemContainer
-      size={size}
-      onClick={() => history.push(`${match.url}${linkUrl}`)}
-    >
+    <Grid 
+      item
+      className={classes.menuItemContainer}
+      xs={6}
+      md={2}
+      onClick={() => history.push(`${match.url}${linkUrl}`)}>
       <BackgroundImageContainer
         className='background-image'
         imageUrl={imageUrl}
       />
       <ContentContainer className='content'>
+        <h3 className={classes.title}>{title.toUpperCase()}</h3>
         <Button className={classes.menuBtn} variant="outlined">
           SHOP NOW
         </Button>
       </ContentContainer>
-    </MenuItemContainer>
+      </Grid>
   )
 }
 
