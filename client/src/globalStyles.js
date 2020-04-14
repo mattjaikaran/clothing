@@ -32,5 +32,7 @@ export const GlobalStyle = createGlobalStyle`
   h6 {
     font-family: 'Suranna', serif !important;
     font-weight: 400;
+    text-align: center;
+    line-height: 40px;
   }
 `
