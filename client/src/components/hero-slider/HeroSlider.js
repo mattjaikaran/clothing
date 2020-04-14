@@ -4,6 +4,7 @@ import Carousel from 'react-material-ui-carousel'
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
 import './HeroSlider.css'
+import grey from '@material-ui/core/colors/grey'
 
 const useStyles = makeStyles(theme => ({
   carouselImg: {
@@ -22,11 +23,18 @@ const useStyles = makeStyles(theme => ({
     opacity: '0.9',
     marginTop: '35px'
   },
+  header: {
+    textShadow: '1px 1px #000'
+  },
   cta: {
+    backgroundColor: 'black',
     textAlign: 'center',
     alignContent: 'center',
     margin: '0 auto',
-    maxWidth: '200px'
+    maxWidth: '200px',
+    '&:hover': {
+      backgroundColor: '#95a5a6'
+    }
   }
 }))
 
@@ -37,7 +45,7 @@ const Item = (props) => {
     <div 
       className={classes.carouselImgContainer} 
       style={{backgroundImage: `url(${imgSrc})`}}>
-      <h3>{name}</h3>
+      <h1 className={classes.header}>{name}</h1>
       <Button
         variant="contained" 
         color="primary"
@@ -66,7 +74,7 @@ const HeroSlider = () => {
     }
   ]
   return (
-    <Carousel autoPlay={false}>
+    <Carousel>
       {items.map(item => <Item key={item.name} item={item} />)}
     </Carousel>
   )
