@@ -55,6 +55,7 @@ const HomepageGrid = () => {
         <div>
           <Button 
             className={classes.btn} 
+            href="/shop/womens"
             variant="outlined" 
             color="default">
             Shop Now
@@ -70,8 +71,9 @@ const HomepageGrid = () => {
         </h2>
           <div>
             <Button 
-              className={classes.btn} 
+              className={classes.btn}
               variant="outlined" 
+              href="/shop/mens"
               color="default">
               Shop Now
           </Button>
@@ -92,7 +94,8 @@ const HomepageGrid = () => {
           <div>
             <Button 
               className={classes.btn} 
-              variant="outlined" 
+              variant="outlined"
+              href="/shop/mens"
               color="default">
               Shop Now
           </Button>
@@ -113,7 +116,8 @@ const HomepageGrid = () => {
         </h2>
         <div>
           <Button 
-            className={classes.btn} 
+            className={classes.btn}
+            href="/shop/hats"
             variant="outlined" 
             color="default">
             Shop Now
@@ -130,7 +134,8 @@ const HomepageGrid = () => {
           <div>
             <Button 
               className={classes.btn} 
-              variant="outlined" 
+              href="/shop/jackets"
+              variant="outlined"
               color="default">
               Shop Now
           </Button>
@@ -150,7 +155,8 @@ const HomepageGrid = () => {
           </h2>
           <div>
             <Button 
-              className={classes.btn} 
+              className={classes.btn}
+              href="/shop/jackets"
               variant="outlined" 
               color="default">
               Shop Now
