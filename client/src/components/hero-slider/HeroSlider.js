@@ -3,8 +3,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import Carousel from 'react-material-ui-carousel'
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
-import './HeroSlider.css'
-import grey from '@material-ui/core/colors/grey'
 
 const useStyles = makeStyles(theme => ({
   carouselImg: {
@@ -22,7 +20,10 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     backgroundColor: 'black',
     opacity: '0.8',
-    marginTop: '35px'
+    marginTop: '45px',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '35px'
+    }
   },
   header: {
     // opacity: '1'

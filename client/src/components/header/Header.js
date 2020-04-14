@@ -21,7 +21,7 @@ import { makeStyles } from '@material-ui/core'
 const useStyles = makeStyles(theme => ({
   appBar: {
     position: 'absolute',
-    height: '60px',
+    height: '70px',
     backgroundColor: 'rgba(255, 255, 255, 1)',
     width: '100%',
     display: 'flex',
@@ -31,6 +31,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       position: 'sticky',
       marginBottom: '-25px',
+      height: '60px'
     }
   }
 }))
