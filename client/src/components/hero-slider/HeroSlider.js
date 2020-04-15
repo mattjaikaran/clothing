@@ -22,11 +22,12 @@ const useStyles = makeStyles(theme => ({
     opacity: '0.8',
     marginTop: '45px',
     [theme.breakpoints.down('sm')]: {
+      height: '450px',
       marginTop: '35px'
     }
   },
   header: {
-    // opacity: '1'
+    marginTop: '30px'
   },
   cta: {
     backgroundColor: 'black',
