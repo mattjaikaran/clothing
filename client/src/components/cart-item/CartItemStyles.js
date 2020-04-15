@@ -14,8 +14,9 @@ export const CartItemImage = styled.img`
 export const ItemDetailsContainer = styled.div`
   width: 70%;
   display: flex;
+  font-size: 12px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 10px;
 `
