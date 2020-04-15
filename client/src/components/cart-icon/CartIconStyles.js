@@ -18,6 +18,7 @@ height: 24px;
 
 export const ItemCountContainer = styled.span`
 position: absolute;
+color: black;
 font-size: 10px;
 font-weight: bold;
 bottom: 12px;
