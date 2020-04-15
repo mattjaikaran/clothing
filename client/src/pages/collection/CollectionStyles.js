@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 export const CollectionContainer = styled.div`
-// display: flex;
-// flex-direction: column;
+  padding: 0 15px;
+  margin: 70px auto 20px;
+  @media screen and (max-width: 959px) {
+    margin-top: 50px;
+  }
 `
 
 export const Title = styled.h2`
