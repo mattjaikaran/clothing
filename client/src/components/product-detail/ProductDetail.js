@@ -8,7 +8,7 @@ const ProductDetail = (props) => {
   // const { name, price, imageUrl } = props.item
   console.log(props)
   return (
-    props.match.params.id ? (
+    props.match.params.id  ? (
       <Grid container spacing={3}>
         <Grid item md={7}>
           <p>fukc</p>
@@ -18,7 +18,7 @@ const ProductDetail = (props) => {
           <h3>{props.toString()}</h3>
           {/* <h5>${props.item.price}</h5>
         <p>{props.item.name}</p> */}
-        <p>fuck</p>
+        <p>derp</p>
           <Button
             variant="outlined"
             onClick={() => props.addItem(props.item)}>
