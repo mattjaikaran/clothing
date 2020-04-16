@@ -11,6 +11,7 @@ import { checkUserSession } from './redux/user/userActions'
 
 import Spinner from './components/spinner/Spinner'
 import ErrorBoundary from './components/error-boundary/ErrorBoundary'
+import ProductDetail from './components/product-detail/ProductDetail'
 
 const Homepage = lazy(() => import('./pages/homepage/Homepage'))
 const ShopPage = lazy(() => import('./pages/shop/Shop'))
@@ -32,6 +33,7 @@ const App = ({ checkUserSession, currentUser }) => {
             <Route exact path='/' component={Homepage} />
             <Route path='/shop' component={ShopPage} />
             <Route exact path='/checkout' component={CheckoutPage} />
+            <Route path='/product/:id' component={ProductDetail} />
             <Route
               exact
               path='/signin'
