@@ -12,6 +12,7 @@ import { checkUserSession } from './redux/user/userActions'
 import Spinner from './components/spinner/Spinner'
 import ErrorBoundary from './components/error-boundary/ErrorBoundary'
 import ProductDetail from './components/product-detail/ProductDetail'
+import Footer from './components/footer/Footer'
 
 const Homepage = lazy(() => import('./pages/homepage/Homepage'))
 const ShopPage = lazy(() => import('./pages/shop/Shop'))
@@ -44,6 +45,7 @@ const App = ({ checkUserSession, currentUser }) => {
           </Suspense>
         </ErrorBoundary>
       </Switch>
+      <Footer />
     </div>
   )
 }

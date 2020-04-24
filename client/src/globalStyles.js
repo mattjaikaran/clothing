@@ -7,12 +7,15 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Palanquin';
-    padding: 50px 60px;
+    padding: 0;
     margin: 0 auto;
     max-width: 1200px;
 
     @media screen and (max-width: 959px) {
-      padding: 0px;
+      padding: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      // margin: 0;
     }
   }
 
