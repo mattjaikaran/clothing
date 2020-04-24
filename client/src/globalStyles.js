@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Palanquin';
-    padding: 20px 60px;
+    padding: 50px 60px;
     margin: 0 auto;
     max-width: 1200px;
 
