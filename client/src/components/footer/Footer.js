@@ -35,6 +35,9 @@ const useStyles = makeStyles(theme => ({
     minWidth: '195px !important',
     fontSize: '0.7rem !important',
     marginTop: '10px',
+    [theme.breakpoints.down('sm')]: {
+      minWidth: '140px !important'
+    },
     '&:hover': {
       backgroundColor: 'black',
       color: 'white',
@@ -53,6 +56,7 @@ const Footer = () => {
         <Grid 
           item 
           sm={3}
+          xs={6}
           className={classes.column}>
           <Typography className={classes.footerTitle} variant="subtitle" gutterBottom>
             Customer Service
@@ -76,6 +80,7 @@ const Footer = () => {
         <Grid 
           item 
           sm={3}
+          xs={6}
           className={classes.column}>
           <Typography className={classes.footerTitle} variant="subtitle" gutterBottom>
             About
@@ -103,6 +108,7 @@ const Footer = () => {
         <Grid 
           item 
           sm={3}
+          xs={6}
           className={classes.column}>
           <Typography className={classes.footerTitle} variant="subtitle" gutterBottom>
             Explore
@@ -120,7 +126,7 @@ const Footer = () => {
         <Grid
           item
           sm={3}
-          xs={12}
+          xs={6}
           className={classes.column}>
           <Typography className={classes.footerTitle} variant="subtitle" gutterBottom>
             Stay in Contact
