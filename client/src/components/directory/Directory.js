@@ -14,7 +14,8 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     marginTop: '2%',
     [theme.breakpoints.only('xs')]: {
-      marginTop: '10%'
+      marginTop: '10%',
+      padding: '0 10px'
     }
   },
   menuItem: {
