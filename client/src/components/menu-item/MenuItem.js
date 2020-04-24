@@ -10,6 +10,19 @@ import {
 } from './MenuItemStyles'
 
 const useStyles = makeStyles(theme => ({
+  menuItemContainer: {
+    height: '240px',
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      '&:lastChild': {
+        flexGrow: 1
+      }
+    }
+  },
   menuBtn: {
     backgroundColor: 'white',
     opacity: '0.5',
@@ -23,18 +36,6 @@ const useStyles = makeStyles(theme => ({
   title: {
     color: 'white'
   },
-  menuItemContainer: {
-    height: '240px',
-    textAlign: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: '0 auto',
-    [theme.breakpoints.down('sm')]: {
-      '&:lastChild': {
-        flexGrow: 1
-      }
-    }
-  }
 }))
 
 const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {

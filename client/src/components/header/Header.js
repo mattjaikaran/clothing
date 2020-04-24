@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { createStructuredSelector } from 'reselect'
 import { ReactComponent as Logo } from '../../assets/molecular.svg'
 import AppBar from '@material-ui/core/AppBar'
@@ -10,8 +11,6 @@ import { selectCurrentUser } from '../../redux/user/userSelectors'
 import { signOutStart } from '../../redux/user/userActions'
 
 import {
-  HeaderContainer,
-  LogoContainer,
   OptionsContainer,
   OptionLink
 } from './HeaderStyles'
@@ -33,6 +32,18 @@ const useStyles = makeStyles(theme => ({
       marginBottom: '-25px',
       height: '60px'
     }
+  },
+  brand: {
+    height: 'auto',
+    // maxWidth: '70px',
+    width: '35px',
+    marginTop: '1%',
+    marginLeft: '2%',
+    [theme.breakpoints.down('xs')]: {
+      maxWidth: '50px',
+      marginTop: '2%',
+      marginLeft: '3%'
+    }
   }
 }))
 
@@ -40,18 +51,17 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
   const classes = useStyles()
   return (
     <AppBar className={classes.appBar}>
-      <LogoContainer to="/">
+      <Link to="/" className={classes.brand}>
         <Logo className="logo" />
-      </LogoContainer>
+      </Link>
       <OptionsContainer>
         {currentUser ? (
           <OptionLink to="#!" as="div" onClick={signOutStart}>
             SIGN OUT
           </OptionLink>
         ) : (
-            <OptionLink to="/signin">SIGN IN</OptionLink>
-          )
-        }
+          <OptionLink to="/signin">SIGN IN</OptionLink>
+        )}
         <CartIcon />
       </OptionsContainer>
       {hidden ? null : <CartDropdown />}

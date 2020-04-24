@@ -8,14 +8,18 @@ import { makeStyles } from '@material-ui/core/styles'
 import MenuItem from '../menu-item/MenuItem'
 import { DirectoryContainer } from './DirectoryStyles'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   menuItemContainer: {
     width: '100%',
-    flexGrow: 1
+    flexGrow: 1,
+    marginTop: '2%',
+    [theme.breakpoints.only('xs')]: {
+      marginTop: '10%'
+    }
   },
   menuItem: {
   }
-})
+}))
 
 const Directory = ({ sections }) => {
   const classes = useStyles()

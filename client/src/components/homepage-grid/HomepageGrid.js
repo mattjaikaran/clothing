@@ -6,7 +6,10 @@ import Hidden from '@material-ui/core/Hidden'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    // backgroundColor: 'red',
+    marginTop: '2%',
+    [theme.breakpoints.only('xs')]: {
+      marginTop: '-7%'
+    },
   },
   imgContainer: {
     // textAlign: 'left'
@@ -14,26 +17,40 @@ const useStyles = makeStyles(theme => ({
   gridImg: {
     width: '100%',
     height: 'auto',
+    [theme.breakpoints.only('xs')]: {
+      marginTop: '7%',
+    },
   },
   copyContainer: {
     marginTop: '8%',
     padding: '12px 0 12px 17% !important',
     [theme.breakpoints.down('sm')]: {
-      padding: '12px 0 12px 28% !important',
+      padding: '0 !important',
       marginLeft: 'auto',
       marginTop: '0',
     },
     [theme.breakpoints.only('sm')]: {
       padding: '12px 0 12px 10% !important'
     },
+    [theme.breakpoints.only('xs')]: {
+      textAlign: 'center'
+    },
   },
   copy: {
     textAlign: 'left',
-    lineHeight: '28px'
+    lineHeight: '28px',
+    [theme.breakpoints.only('xs')]: {
+      textAlign: 'center'
+    },
   },
   btn: {
     minWidth: '160px !important',
     fontSize: '0.7rem !important',
+    '&:hover': {
+      backgroundColor: 'black',
+      color: 'white',
+      transition: 'background-color 1s ease'
+    }
   }
 }))
 
