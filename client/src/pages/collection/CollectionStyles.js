@@ -10,7 +10,11 @@ export const CollectionContainer = styled.div`
 
 export const Title = styled.h2`
   font-size: 38px;
-  margin: 0 auto 30px;
+  // margin: 0 auto 30px;
+  @media screen and (min-width: 960px) {
+    margin-top: 100px;
+  }
+
 `
 
 export const ItemContainer = styled.div`
