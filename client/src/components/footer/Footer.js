@@ -4,6 +4,10 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import PinterestIcon from '@material-ui/icons/Pinterest';
+import TwitterIcon from '@material-ui/icons/Twitter';
 
 const useStyles = makeStyles(theme => ({
   footer: {
@@ -30,6 +34,9 @@ const useStyles = makeStyles(theme => ({
       margin: '0 auto',
       textAlign: 'center',
     }
+  },
+  socialIcon: {
+    margin: '5px'
   },
   btn: {
     minWidth: '195px !important',
@@ -131,6 +138,12 @@ const Footer = () => {
           <Typography className={classes.footerTitle} variant="subtitle" gutterBottom>
             Stay in Contact
           </Typography>
+          <div>
+            <FacebookIcon className={classes.socialIcon} />
+            <InstagramIcon className={classes.socialIcon} />
+            <PinterestIcon className={classes.socialIcon} />
+            <TwitterIcon className={classes.socialIcon} />
+          </div>
           <TextField 
             id="outlined-basic" 
             label="Email Address" 
