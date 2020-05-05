@@ -7,15 +7,15 @@ import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles(theme => ({
   footer: {
+    marginTop: '1em',
     height: 'auto',
     left: 'auto',
     right: 0,
-    backgroundColor: 'grey',
+    backgroundColor: '#f9f9f9',
     width: '100%',
     display: 'flex',
     justifyContent: 'space-between',
     padding: '0 15px 0',
-    color: 'white',
     textAlign: 'center',
   },
   links: {

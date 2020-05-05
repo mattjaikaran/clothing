@@ -8,8 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Palanquin';
     padding: 0;
-    margin: 0 auto;
-    max-width: 1200px;
+    margin: 0;
 
     @media screen and (max-width: 959px) {
       padding: 0;
